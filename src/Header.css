@@ -24,6 +24,10 @@
   width: 100%;
 }
 
+.header__left > input:focus {
+  outline: 0;
+}
+
 .header__right > h4 {
   margin-left: 10px;
 }
