@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Spotify-Clone
+
+## Quick Look
+<img src="https://github.com/ankithans/spotify-clone/blob/master/mockups/screen1.png" > 
+<img src="https://github.com/ankithans/spotify-clone/blob/master/mockups/screen2.png" > 
+<img src="https://github.com/ankithans/spotify-clone/blob/master/mockups/screen3.png" > 
+
+
 
 ## Available Scripts
 
