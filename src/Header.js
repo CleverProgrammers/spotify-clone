@@ -3,11 +3,9 @@ import "./Header.css";
 import { useStateValue } from "./StateProvider";
 import { Avatar } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
-import { useEffect } from "react";
 
-function Header({ spotify }) {
+function Header() {
   const [{ user }, dispatch] = useStateValue();
-
   return (
     <div className="header">
       <div className="header__left">
