@@ -6,7 +6,7 @@ import { getTokenFromResponse } from "./spotify";
 import "./App.css";
 import Login from "./Login";
 
-const s = new SpotifyWebApi();
+const spotify = new SpotifyWebApi();
 
 function App() {
   const [{ token }, dispatch] = useStateValue();
@@ -18,21 +18,21 @@ function App() {
     let _token = hash.access_token;
 
     if (_token) {
-      s.setAccessToken(_token);
+      spotify.setAccessToken(_token);
 
       dispatch({
         type: "SET_TOKEN",
         token: _token,
       });
 
-      s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+      spotify.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
         })
       );
 
-      s.getMyTopArtists().then((response) =>
+      spotify.getMyTopArtists().then((response) =>
         dispatch({
           type: "SET_TOP_ARTISTS",
           top_artists: response,
@@ -41,20 +41,20 @@ function App() {
 
       dispatch({
         type: "SET_SPOTIFY",
-        spotify: s,
+        spotify: spotify,
       });
 
-      s.getMe().then((user) => {
+      spotify.getMe().then((user) => {
         dispatch({
           type: "SET_USER",
           user,
         });
       });
 
-      s.getUserPlaylists().then((playlists) => {
+      spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
-          playlists,
+          playlists:playlists,
         });
       });
     }
@@ -63,7 +63,7 @@ function App() {
   return (
     <div className="app">
       {!token && <Login />}
-      {token && <Player spotify={s} />}
+      {token && <Player spotify={spotify} />}
     </div>
   );
 }
