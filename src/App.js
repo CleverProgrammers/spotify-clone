@@ -25,7 +25,7 @@ function App() {
         token: _token,
       });
 
-      s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+      s.getPlaylist("37i9dQZF1DWYteTcNVQZNq").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
@@ -57,6 +57,13 @@ function App() {
           playlists,
         });
       });
+      s.getMyDevices().then(({devices})=>{
+        console.log("Benim cihazlarım",devices[0].id)
+        dispatch({
+          type:"SET_DEVICE",
+          device_id:devices[0]?.id
+        })
+      })
     }
   }, [token, dispatch]);
 

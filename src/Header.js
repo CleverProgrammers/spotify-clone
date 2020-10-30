@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 function Header({ spotify }) {
   const [{ user }, dispatch] = useStateValue();
-
+  console.log((user?.images[0])?user.images[0].url:'b')
   return (
     <div className="header">
       <div className="header__left">
@@ -18,7 +18,7 @@ function Header({ spotify }) {
         />
       </div>
       <div className="header__right">
-        <Avatar alt={user?.display_name} src={user?.images[0].url} />
+        <Avatar alt={user?.display_name} src={(user?.images[0])?user?.images[0].url:'https://uplay-avatars.s3.amazonaws.com/d840aae8-60ec-4830-9465-da5e1c16ae59/default_256_256.png'} />
         <h4>{user?.display_name}</h4>
       </div>
     </div>

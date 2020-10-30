@@ -8,6 +8,7 @@ export const initialState = {
   top_artists: null,
   playing: false,
   item: null,
+  device_id:null
 };
 
 const reducer = (state, action) => {
@@ -60,6 +61,11 @@ const reducer = (state, action) => {
         ...state,
         playlists: action.playlists,
       };
+      case "SET_DEVICE":
+      return{
+        ...state,
+        device_id:action.device_id,
+      }
     default:
       return state;
   }
