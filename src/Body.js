@@ -8,12 +8,13 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 function Body({ spotify }) {
-  const [{ discover_weekly }, dispatch] = useStateValue();
+  const [{ discover_weekly,device_id }, dispatch] = useStateValue();
 
   const playPlaylist = (id) => {
     spotify
       .play({
-        context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+        device_id:device_id,
+        context_uri: `spotify:playlist:37i9dQZF1DWYteTcNVQZNq`,
       })
       .then((res) => {
         spotify.getMyCurrentPlayingTrack().then((r) => {
@@ -32,6 +33,7 @@ function Body({ spotify }) {
   const playSong = (id) => {
     spotify
       .play({
+        device_id:device_id,
         uris: [`spotify:track:${id}`],
       })
       .then((res) => {
@@ -71,8 +73,8 @@ function Body({ spotify }) {
           <MoreHorizIcon />
         </div>
 
-        {discover_weekly?.tracks.items.map((item) => (
-          <SongRow playSong={playSong} track={item.track} />
+        {discover_weekly?.tracks.items.map((item,i) => (
+          <SongRow key={i} unique={i} playSong={playSong} track={item.track} />
         ))}
       </div>
     </div>
