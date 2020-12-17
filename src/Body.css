@@ -6,7 +6,7 @@
   flex: 0.8;
   color: white;
   background: linear-gradient(transparent, rgba(0, 0, 0, 1));
-  background-color: rgb(91, 87, 115);
+  background-color: rgb(32, 32, 32);
 }
 
 .body::-webkit-scrollbar {
@@ -47,7 +47,7 @@
   opacity: 0.4;
   height: 80%;
   width: 80%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.37);
 }
 
 .body__songs {
