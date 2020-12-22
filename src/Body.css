@@ -6,7 +6,7 @@
   flex: 0.8;
   color: white;
   background: linear-gradient(transparent, rgba(0, 0, 0, 1));
-  background-color: rgb(32, 32, 32);
+  background-color: rgb(166, 89, 166);
 }
 
 .body::-webkit-scrollbar {

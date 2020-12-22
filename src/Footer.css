@@ -5,13 +5,13 @@
   bottom: 0;
   padding: 20px;
   height: 65px;
-  width: 97%;
+  width: 100%;
   background-color: #282828;
 }
 
 .footer__right * .MuiSlider-root {
   color: green;
-  width: 90%;
+  width: 80%;
 }
 .footer__left {
   display: flex;
