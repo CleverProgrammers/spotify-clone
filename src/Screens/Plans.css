@@ -1,0 +1,91 @@
+.plans{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(91,87,115),rgb(0,0,0,1));
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.pricing-plan{
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+    margin: 15px;
+}
+.pricing-plan_header{
+    padding: 25px;
+    background-color: rgb(30,50,100);
+    color: #ffffff;
+
+}
+.pricing_title{
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.pricing-plan_summary{
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+}
+.description{
+    padding: 25px;
+    background: white;
+}
+.list{
+    padding: 0;
+    margin: 0;
+}
+.feature{
+    list-style: none;
+    margin: 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.9em;
+}
+.feature:not(:last-child){
+    margin-bottom: 0.5em;
+}
+.feature::before{
+    content: "\2714";
+    color: #009578;
+    position: absolute;
+    left: 0;
+}
+.actions{
+    background: white;
+    padding: 25px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    display: inline-block;
+    margin: 15px auto;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #009578;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #009578;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+}
+.cost{
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    color: #000;
+}
+.text{
+    margin: 0;
+    text-align: center;
+}
